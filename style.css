@@ -123,13 +123,13 @@
 }
 
 .slider__btn--left {
-    background-image: url('./img/btn_left.png');
+    background-image: url('./assets/img/btn_left.png');
     margin-left: 25px;
 
 }
 
 .slider__btn--right {
-    background-image: url('./img/btn_right.png');
+    background-image: url('./assets/img/btn_right.png');
     margin-right: 23px;
 }
 
@@ -222,25 +222,25 @@
 }
 
 .features__element--pen {
-    background-image: url('./img/pen.png');
+    background-image: url('./assets/img/pen.png');
 }
 
 .features__element--bulb {
-    background-image: url('./img/bulb.png');
+    background-image: url('./assets/img/bulb.png');
 }
 
 .features__element--heart {
-    background-image: url('./img/heart.png');
+    background-image: url('./assets/img/heart.png');
 }
 
 .features__element--small-phone {
-    background-image: url('./img/small-phone.png');
+    background-image: url('./assets/img/small-phone.png');
 }
 
 .features__element--bubble {
-    background-image: url('./img/bubble.png');
+    background-image: url('./assets/img/bubble.png');
 }
 
 .features__element--star {
-    background-image: url('./img/star.png');
+    background-image: url('./assets/img/star.png');
 }
