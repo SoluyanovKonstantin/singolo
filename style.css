@@ -554,7 +554,7 @@
     width: 604px;
 }
 
-.form__submit {
+.form .form__submit {
     position: absolute;
     left: -9999px;
 }
@@ -562,15 +562,19 @@
 
 
 .form__text-area:focus ~ .form__submit {
-    left: 0;
-    top: 10px;
     width: 100px;
+    padding-left: 0;
+    padding-right: 0;
+    left: 0;
+    bottom: -50px;
 }
 
 .form__submit:hover {
     left: 0;
-    top: 10px;
     width: 100px;
+    bottom: -50px;
+    padding-left: 0;
+    padding-right: 0;
 }
 
 .information {
