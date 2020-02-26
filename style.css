@@ -16,6 +16,16 @@
     align-items: center;
     justify-content: space-between;
 }
+
+.main-header a {
+    text-decoration: none;
+}
+
+.disabled {
+    pointer-events: none;
+    cursor: pointer;
+}
+
 .nav-bar {
     display: block;
     margin-right: 40px;
@@ -82,6 +92,7 @@
     font-weight: 400;
     letter-spacing: -0.015em;
 }
+
 
 .red-star {
     color:#dc6660;
@@ -325,6 +336,11 @@
     list-style: none;
     display: inline-block;
     width: auto;
+}
+
+.portfolio__btn:focus {
+    outline: none;
+    border-color: white;
 }
 
 .portfolio__btn {
