@@ -326,24 +326,24 @@
     margin-bottom: 11px;
 }
 
-.portfolio__filter {
+.filter {
     padding-left: 1px;
     margin-bottom: 19px;
     margin-top: 0;
 }
 
-.portfolio__filter li {
+.filter li {
     list-style: none;
     display: inline-block;
     width: auto;
 }
 
-.portfolio__btn:focus {
+.filter__btn:focus {
     outline: none;
     border-color: white;
 }
 
-.portfolio__btn {
+.filter__btn {
     display: block;
     background-color: transparent;
     height: 22px;
@@ -359,17 +359,17 @@
     margin-right: 6px;
 }
 
-.portfolio__btn:hover {
+.filter__btn:hover {
     color: white;
     border-color: #c5c5c5;
     cursor: pointer;
 }
 
-.portfolio__btn--checked:hover {
+.filter__btn--checked:hover {
     cursor: default;
 }
 
-.portfolio__btn--checked {
+.filter__btn--checked {
     color: white;
     border: 1.0px solid #c5c5c5;
 }
