@@ -575,6 +575,7 @@
     bottom: -50px;
     padding-left: 0;
     padding-right: 0;
+    cursor: pointer;
 }
 
 .information {
