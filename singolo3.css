@@ -129,7 +129,7 @@
 }
 
 .information__list .information__list--email::before {
-    top: 9px;
+    top: 7px;
     background-image: url(./assets/img/mail_in_form.svg);
     background-size: 13px;
     left: -23px;
@@ -154,7 +154,11 @@
 }
 
 .socials--footer a:hover {
-    margin-bottom: -4px;
+    margin-bottom: -5px;
+    width: 35px;
+    height: 35px;
+    margin-left: 0;
+    margin-right: 0;
 }
 
 .footer__copyright {
