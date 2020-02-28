@@ -127,6 +127,7 @@
 
 .slider__btn:focus {
     outline: none;
+    background-color: lightcoral;
 }
 
 .slider__btn:hover {
@@ -585,7 +586,8 @@
     bottom: -50px;
 }
 
-.form__submit:hover {
+.form__submit:hover,
+.form__submit:focus {
     left: 0;
     width: 100px;
     bottom: -50px;
