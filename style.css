@@ -646,9 +646,9 @@
     width: 15px;
     height: 15px;
     background-repeat: no-repeat;
-    background-size: 7px;
-    top: 5px;
-    left: -20px;
+    background-size: 15px;
+    top: 3px;
+    left: -24px;
 }
 
 .information__list .information__list--location::before {
@@ -656,16 +656,21 @@
 }
 
 .information__list .information__list--phone::before {
-    background-image: url('./assets/img/phone_in_form.svg');
-    background-size: 11px;
-    left: -22px;
+    background-image: url(./assets/img/phone_in_form.svg);
+    background-size: 14px;
+    left: -23px;
+    top: 3px;
 }
 
 .information__list .information__list--email::before {
-    top: 7px;
+    top: 6px;
     background-image: url(./assets/img/mail_in_form.svg);
-    background-size: 13px;
-    left: -23px;
+    background-size: 20px 15px;
+    left: -25px;
+}
+
+.information__list--email {
+    margin-top: 1px;
 }
 
 .footer {
