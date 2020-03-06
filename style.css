@@ -432,7 +432,9 @@
     margin-bottom: 0;
     letter-spacing: -0.01em;
     white-space: nowrap;
-
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 19px;
 }
 
 .about-us__description {
@@ -440,7 +442,7 @@
     line-height: 21px;
     font-weight: 400;
     color: #767e9e;
-    margin-top: 10px;
+    margin-top: 9px;
     text-align: justify;
     letter-spacing: -0.005em;
     margin-bottom: 0;
