@@ -126,7 +126,7 @@
             <p class="section-form__text">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
             <div class="form__wrapper">
                 <form class="form" method="POST" action="./">
-                    <p><input id="name" type="text" name="name" placeholder="Name (Required)" required></p>
+                    <p><input id="name" type="text" name="name" placeholder="Name" pattern='([A-Za-z0-9])+' title="The username should contain only letters and numbers" required></p>
                     <p><input id="email" type="email" name="email" placeholder="Email (Required)" required></p>
                     <p><input id="subject" type="text" name="subject" placeholder="Subject"></p>
                     <textarea class="form__text-area" cols="20" placeholder="Describe your project in detail..."></textarea>
