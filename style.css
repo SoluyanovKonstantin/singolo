@@ -301,7 +301,7 @@
 }
 
 .portfolio {
-    min-height: 801px;
+    min-height: 800px;
     background: linear-gradient(#2d303a 863px, #323746 683px );
     padding-top: 69px;
     padding-left: 40px;
@@ -684,8 +684,8 @@
 .information__list .information__list--email::before {
     top: 5px;
     background-image: url(./assets/img/mail_in_form.svg);
-    background-size: 20px 15px;
-    left: -20px;
+    background-size: 22px 17px;
+    left: -26px;
 }
 
 .information__list--email {
