@@ -416,14 +416,18 @@
     margin-bottom: 45px;
 }
 
+.about-us__authors {
+    display: flex;
+}
+
 .about-us__author {
     display: inline-block;
     width: 300px;
-    margin-right: 16px;
+    margin-right: 19px;
 }
 
 .about-us__author:nth-child(2) {
-    margin-right: 18px;
+    margin-right: 21px;
 }
 
 .about-us__author:nth-child(3) .socials {
