@@ -1,4 +1,8 @@
 
+.display-none {
+    display: none;
+}
+
 .container {
     width: 1020px;
     display: block;
@@ -127,7 +131,7 @@
 
 .slider__btn:focus {
     outline: none;
-    background-color: lightcoral;
+    border: 1px dashed blue;
 }
 
 .slider__btn:hover {
@@ -734,4 +738,47 @@
 
 .socials--footer .socials__link--gp {
     width: 30px;
+}
+
+.slider--blue {
+    background: #648BF0;
+}
+
+.slider__element--second .phone--left,
+.slider__element--second .phone--right {
+    opacity: 0.5;
+    bottom: 0;
+    transform: scale(0.7);
+    top: 0px;
+}
+
+.slider__element--second .phone--left {
+    left: 56px;
+}
+
+.slider__element--second .phone--right {
+    left: -64px;
+}
+
+.screen-phone {
+    position: absolute;
+    width: 189px;
+    height: 334px;
+    background-color: black;
+}
+
+.screen-phone--first {
+    top: 118px;
+    left: 126px;
+}
+
+.screen-phone--second {
+    transform: rotate(90deg);
+    top: 115px;
+    left: 557px;
+}
+
+.album {
+    display: flex;
+    flex-wrap: wrap;
 }
