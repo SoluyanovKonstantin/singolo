@@ -59,8 +59,10 @@ document.querySelectorAll('.album__image').forEach( (item) => {
   item.addEventListener('click', (evt) => {
     document.querySelectorAll('.album__image').forEach( (item) => {
       item.style['box-shadow'] = '0 0 0px #F06C64';
+      item.style['cursor'] = 'pointer';
     })
     item.style['box-shadow'] = '0px 0px 0px 5px #F06C64';
+    item.style['cursor'] = 'default';
   })
 })
 
