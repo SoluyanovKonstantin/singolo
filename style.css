@@ -170,6 +170,11 @@ html {
     bottom: 4px;
 }
 
+.phone--middle {
+    height: 498px;
+    width: 254px;
+}
+
 .slider__element::after {
     position: absolute;
     content: '';
@@ -197,6 +202,20 @@ html {
 .slider__element--second::after,
 .slider__element--second::before {
     display: none;
+}
+
+.slider__element--second::before {
+    opacity: 1;
+    display: block;
+    position: absolute;
+    content: '';
+    width: 200px;
+    height: 344px;
+    background-image: url(./assets/img/phone-vertical-display.png);
+    transform: none;
+    z-index: 2;
+    left: 398px;
+    top: 211px;
 }
 
 .phone--right {
@@ -800,11 +819,11 @@ html {
 }
 
 .slider__element--second .phone--left {
-    left: 56px;
+    left: 58px;
 }
 
 .slider__element--second .phone--right {
-    left: -64px;
+    left: -66px;
 }
 
 .screen-phone {
