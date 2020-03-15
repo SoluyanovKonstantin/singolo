@@ -16,8 +16,8 @@ let getSliderBtn = document.querySelectorAll('.slider__btn');
 getSliderBtn.forEach(function(item) {
   item.addEventListener('click', function(evt) {
     this.blur();
-    document.querySelectorAll('.slider__element').forEach(function(itemJ){
-      itemJ.classList.toggle('display-none');
+    document.querySelectorAll('.slider__element').forEach(function(item){
+      item.classList.toggle('display-none');
     }) 
     document.querySelector('.slider').classList.toggle('slider--blue')
   })
