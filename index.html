@@ -10,23 +10,30 @@
     <header class="main-header">
         <a href="./" class="disabled"><h1 class="logo">singolo<span class="red-star">*</span></h1></a>
         <nav class="nav-bar">
-            <a class="checked">HOME</a>
-            <a href="./">SERVICES</a>
-            <a href="./">PORTFOLIO</a>
-            <a href="./">ABOUT</a>
-            <a href="./">CONTACT</a>
+            <a class="nav-bar__el checked" href="#home">HOME</a>
+            <a class="nav-bar__el" href="#services">SERVICES</a>
+            <a class="nav-bar__el" href="#portfolio">PORTFOLIO</a>
+            <a class="nav-bar__el" href="#about">ABOUT</a>
+            <a class="nav-bar__el" href="#contact">CONTACT</a>
         </nav>
     </header>
     <main>
-        <div class="slider">
+        <div id="home" class="slider">
             <button class="slider__btn slider__btn--left"></button>
             <div class="slider__element">
-                <img src="./assets/img/iPhone_vertical.png" class="phone phone--left" alt="right phone">
-                <img src="./assets/img/iPhone_horizontal.png" alt="left phone" class="phone phone--right">
+                <img src="./assets/img/phone-left.png" class="phone phone--first phone--left" alt="right phone">
+                <div class="screen-phone phone--first screen-phone--first display-none"></div>
+                <img src="./assets/img/phone-right.png" class="phone phone--second phone--right" alt="left phone">
+                <div class="screen-phone phone--second screen-phone--second display-none"></div>
+            </div>
+            <div class="slider__element slider__element--second display-none">
+                <img src="./assets/img/iPhone_vertical.png" class="phone phone--left phone--off" alt="right phone">
+                <img src="./assets/img/iPhone_vertical.png" class="phone phone--middle phone--off" alt="right phone">
+                <img src="./assets/img/iPhone_vertical.png" class="phone phone--right phone--off" alt="right phone">
             </div>
             <button class="slider__btn slider__btn--right"></button>
         </div>
-        <section class="our-services">
+        <section id="services" class="our-services">
             <h2 class="our-services__header">Our Services</h2>
             <p class="our-services__text">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
             <div class="features">
@@ -56,7 +63,7 @@
                 </article>
             </div>
         </section>
-        <section class="portfolio">
+        <section id="portfolio" class="portfolio">
             <h1>Portfolio</h1>
             <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
             <ul class="filter">
@@ -78,12 +85,9 @@
                 <img src="./assets/img/radio_slice.jpg" alt="radio_slice" class="album__image">
                 <img src="./assets/img/monster.jpg" alt="monster" class="album__image">
                 <img src="./assets/img/brown.jpg" alt="brown" class="album__image">
-                       <img src="./assets/img/radio_slice.jpg" alt="radio_slice" class="album__image">
-                <img src="./assets/img/monster.jpg" alt="monster" class="album__image">
-                <img src="./assets/img/brown.jpg" alt="brown" class="album__image">
             </div>
         </section>
-        <section class="about-us">
+        <section id="about" class="about-us">
             <h1 class="about-us__header">About Us</h1>
             <p class="about-us__text">
                 Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.
@@ -124,15 +128,15 @@
                 </section>
             </div>
         </section>
-        <section class="section-form"> 
+        <section id="contact" class="section-form"> 
             <h1 class="section-form__header">Get a Quote</h1>
             <p class="section-form__text">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
             <div class="form__wrapper">
                 <form class="form" method="POST" action="./">
-                    <p><input id="name" type="text" name="name" placeholder="Name (Required)" pattern="([A-Za-z0-9_'])+" title="The username should contain only letters, numbers and '_'" required></p>
+                    <p><input id="name" type="text" name="name" placeholder="Name (Required)" required></p>
                     <p><input id="email" type="email" name="email" placeholder="Email (Required)" required></p>
                     <p><input id="subject" type="text" name="subject" placeholder="Subject"></p>
-                    <textarea class="form__text-area" cols="20" placeholder="Describe your project in detail..."></textarea>
+                    <textarea id="description" class="form__text-area" cols="20" placeholder="Describe your project in detail..."></textarea>
                     <input type="submit" class="form__submit" value="Submit">
                 </form>
                 <section class="information">
@@ -156,5 +160,6 @@
             <li><a href="" class="socials__link socials__link--in">linkedin</a></li>
         </ul>
     </footer>
+    <script type="text/javascript" src="./script.js"></script>
 </body>
 </html>
