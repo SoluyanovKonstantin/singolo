@@ -1,3 +1,6 @@
+html {
+    scroll-behavior: smooth;
+}
 
 .display-none {
     display: none;
@@ -19,6 +22,9 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    position: fixed;
+    width: 1020px;
+    z-index: 3;
 }
 
 .main-header a {
@@ -110,6 +116,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    padding-top: 95px;
 }
 
 .slider__btn {
@@ -127,25 +134,28 @@
     width: 50px;
     height: 50px;
     border-radius: 50%;
+    filter: opacity(20%);
 }
 
 .slider__btn:focus {
     outline: none;
-    border: 1px dashed blue;
+    filter: opacity(50%);
+
 }
 
 .slider__btn:hover {
-    background-color: lightcoral;
+    filter: opacity(50%);
 }
 
 .slider__btn--left {
-    background-image: url('./assets/img/btn_left.png');
+    background-image: url('./assets/img/arrow-right.svg');
+    transform: rotate(180deg);
     margin-left: 25px;
 
 }
 
 .slider__btn--right {
-    background-image: url('./assets/img/btn_right.png');
+    background-image: url('./assets/img/arrow-right.svg');
     margin-right: 23px;
 }
 
@@ -168,6 +178,8 @@
     padding-top: 69px;
     background: linear-gradient(0deg, #fff 6px, #f2f2f2 6px);
     font-family: 'LatoWeb', Arial, sans-serif;
+    z-index: 1;
+    position: relative;
 }
 
 .our-services__header {
@@ -308,12 +320,13 @@
     min-height: 800px;
     background: linear-gradient(#2d303a 863px, #323746 683px );
     padding-top: 69px;
-    padding-left: 40px;
+    padding-left: 35px;
 }
 
 .portfolio > h1 {
     margin-top: 0;
     margin-bottom: 27px;
+    margin-left: 5px;
     font-family: 'Lato', 'Arial' ,sans-serif;
     font-size: 30px;
     line-height: 17px;
@@ -329,12 +342,14 @@
     color: #767e9e;
     margin-top: 0;
     margin-bottom: 11px;
+    margin-left: 5px;
 }
 
 .filter {
     padding-left: 1px;
-    margin-bottom: 19px;
+    margin-bottom: 14px;
     margin-top: 0;
+    margin-left: 5px;
 }
 
 .filter li {
@@ -383,6 +398,7 @@
 }
 
 .album {
+    padding: 5px;
     height: 620px;
     overflow: hidden;
 }
@@ -762,13 +778,13 @@
 
 .screen-phone {
     position: absolute;
-    width: 189px;
+    width: 188px;
     height: 334px;
+    border-radius: 2px;
     background-color: black;
 }
-
 .screen-phone--first {
-    top: 118px;
+    top: 117px;
     left: 126px;
 }
 
@@ -776,9 +792,17 @@
     transform: rotate(90deg);
     top: 115px;
     left: 557px;
+    width: 189px;
 }
 
 .album {
     display: flex;
     flex-wrap: wrap;
+}
+
+#portfolio {
+    border-top: 95px solid rgba(0,0,0,0);
+    position: relative;
+    top: -95px;
+    z-index: 0;
 }

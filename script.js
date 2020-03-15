@@ -1,32 +1,13 @@
-const anchors = [].slice.call(document.querySelectorAll('a[href*="#"]')),
-      animationTime = 100,
-      framesCount = 20;
+const anchors = [].slice.call(document.querySelectorAll('a[href*="#"]'));
 
 anchors.forEach(function(item) {
   item.addEventListener('click', function(e) {
-    e.preventDefault();
 
     anchors.forEach((item)=> {
         item.classList.remove('checked');
     })
-    item.classList.add('checked');
-    let coordY = document.querySelector(item.getAttribute('href')).getBoundingClientRect().top + window.pageYOffset;
+    item.classList.add('checked');    
     
-    let scroller = setInterval(function() {
-      let scrollBy = coordY / framesCount;
-      
-      let scrollHeight = Math.max(
-        document.body.scrollHeight, document.documentElement.scrollHeight,
-        document.body.offsetHeight, document.documentElement.offsetHeight,
-        document.body.clientHeight, document.documentElement.clientHeight
-      );
-      if(scrollBy > window.pageYOffset - coordY && window.innerHeight + window.pageYOffset < scrollHeight) {
-        window.scrollBy(0, scrollBy);
-      } else {
-        window.scrollTo(0, coordY);
-        clearInterval(scroller);
-      }
-    }, animationTime / framesCount);
   });
 });
 
@@ -34,6 +15,7 @@ let getSliderBtn = document.querySelectorAll('.slider__btn');
 
 getSliderBtn.forEach(function(item) {
   item.addEventListener('click', function(evt) {
+    this.blur();
     document.querySelectorAll('.slider__element').forEach(function(itemJ){
       itemJ.classList.toggle('display-none');
     }) 
@@ -43,13 +25,13 @@ getSliderBtn.forEach(function(item) {
 
 document.querySelectorAll('.phone--first').forEach(function(item) {
   item.addEventListener('click', (evt)=>{
-    document.querySelector('.screen-phone--first').classList.remove('display-none');
+    document.querySelector('.screen-phone--first').classList.toggle('display-none');
   })
 })
 
 document.querySelectorAll('.phone--second').forEach(function(item) {
   item.addEventListener('click', (evt)=>{
-    document.querySelector('.screen-phone--second').classList.remove('display-none');
+    document.querySelector('.screen-phone--second').classList.toggle('display-none');
   })
 })
 
@@ -76,18 +58,26 @@ document.querySelectorAll('.filter__btn').forEach( (item)=>{
 document.querySelectorAll('.album__image').forEach( (item) => {
   item.addEventListener('click', (evt) => {
     document.querySelectorAll('.album__image').forEach( (item) => {
-      item.style.border = '0px solid #F06C64';
+      item.style['box-shadow'] = '0 0 0px #F06C64';
     })
-    item.style.border = '5px solid #F06C64';
+    item.style['box-shadow'] = '0px 0px 0px 5px #F06C64';
   })
 })
 
 document.querySelector('.form__submit').addEventListener('click', (evt) => {
-  evt.preventDefault();
-  let subject = document.querySelector('#subject').value;
-  subject = subject === '' ? 'Без темы' : 'Тема: ' + subject;
-  let description = document.querySelector('#description').value;
-  description = description === '' ? 'Без описания' : 'Описание: ' + description;
-  let message = 'Письмо отправлено \n'+subject+'\n'+description;
-  alert(message);
+  let name = document.querySelector('#name').value;
+  let email = document.querySelector('#email').value;
+  name = name.replace(' ', '');
+  email = email.replace(' ', '');
+  if (document.querySelector('#name').value != '') {
+    if (document.querySelector('#email').value != '' && email.includes('@')) {
+      evt.preventDefault();
+      let subject = document.querySelector('#subject').value;
+      subject = subject === '' ? 'Без темы' : 'Тема: ' + subject;
+      let description = document.querySelector('#description').value;
+      description = description === '' ? 'Без описания' : 'Описание: ' + description;
+      let message = 'Письмо отправлено \n'+subject+'\n'+description;
+      alert(message);
+    }
+  }
 })
