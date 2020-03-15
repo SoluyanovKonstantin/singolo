@@ -178,6 +178,11 @@ html {
     width: 254px;
 }
 
+.phone--first,
+.phone--second {
+    cursor: pointer;
+}
+
 .slider__element::after {
     position: absolute;
     content: '';
