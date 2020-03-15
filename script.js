@@ -67,12 +67,8 @@ document.querySelectorAll('.album__image').forEach( (item) => {
 })
 
 document.querySelector('.form__submit').addEventListener('click', (evt) => {
-  let name = document.querySelector('#name').value;
-  let email = document.querySelector('#email').value;
-  name = name.replace(' ', '');
-  email = email.replace(' ', '');
-  if (document.querySelector('#name').value != '') {
-    if (document.querySelector('#email').value != '' && email.includes('@')) {
+  if ( document.querySelector('#name').checkValidity() ) {
+    if ( document.querySelector('#email').checkValidity() ) {
       evt.preventDefault();
       let subject = document.querySelector('#subject').value;
       subject = subject === '' ? 'Без темы' : 'Тема: ' + subject;
