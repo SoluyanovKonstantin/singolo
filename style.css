@@ -901,14 +901,14 @@ html {
     z-index: 2;
 }
 .screen-phone--first {
-    top: 225px;
-    left: 153px;
+    top: 119px;
+    left: 126px;
 }
 
 .screen-phone--second {
     transform: rotate(90deg);
-    top: 221px;
-    left: 558px;
+    top: 115px;
+    left: 557px;
     width: 189px;
 }
 

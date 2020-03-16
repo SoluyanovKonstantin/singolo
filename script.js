@@ -18,7 +18,8 @@ getSliderBtn.forEach(function(item) {
     this.blur();
     let flag = item.classList.contains('slider__btn--left');
     document.querySelectorAll('.slider__element').forEach(function(item){
-      if (item.classList.contains('display-none--left') || item.classList.contains('display-none--right')) {
+      if (item.classList.contains('display-none--left') || item.classList.contains('display-none--right') ||  item.classList.contains('display-none')) {
+        item.classList.remove('display-none');
         item.classList.remove('display-none--left');
         item.classList.remove('display-none--right');
       } else {
