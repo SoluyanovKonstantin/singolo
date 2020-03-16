@@ -545,9 +545,10 @@ html {
     line-height: 30px;
     font-weight: 300;
     color: #767e9e;
-    width: 940px;
+    max-width: 940px;
     text-align: justify;
     margin-bottom: 45px;
+    padding-right: 35px;
 }
 
 .about-us__authors {
@@ -675,7 +676,8 @@ html {
     line-height: 30px;
     font-weight: 300;
     color: #f0d8d9;
-    width:940px;
+    max-width:940px;
+    padding-right: 35px;
     text-align: justify;
 }
 
@@ -755,7 +757,7 @@ html {
 }
 
 .information {
-    width: 301px;
+    max-width: 301px;
     margin-left: 21px;
     margin-top: 12px;
 }
@@ -783,7 +785,8 @@ html {
     margin-top: 0px;
     margin-left: -0.5px;
     margin-bottom: 20px;
-    width: 302px;
+    max-width: 302px;
+    padding-right: 15px;
     text-align: justify;
     line-height: 22px;
 }
@@ -917,12 +920,120 @@ html {
     flex-wrap: wrap;
 }
 
-@media (max-width : 768px) {
+@media (max-width : 1020px) {
     .container {
         width: 768px;
     }
 
     .slider__element {
         width: 768px;
+        min-height: 452px;
+    }
+
+    .slider {
+        min-height: 452px;
+    }
+
+    .main-header {
+        width: 768px;
+    }
+
+    .portfolio {
+        background: linear-gradient(#2d303a 1075px, #323746 683px );
+    }
+
+    .album {
+        height: 820px;
+        padding-bottom: 68px;
+    }
+
+    .album__image {
+        width: 216px;
+        height: 183px;
+    }
+    
+    .phone--left {
+        width: 163px;
+    }
+
+    .phone--right {
+        width: 345px;
+        left: 159px;
+        bottom: 42px;
+    }
+
+    .slider__element::after {
+        width: 180px;
+        height: 362px;
+        top: 53px;
+        left: 112px;
+        background-image: url(./assets/img/shadow_left.png);
+        background-size: 180px;
+    }
+
+    .slider__element::before {
+        width: 180px;
+        height: 362px;
+        left: 419px;
+        top: 49px;
+        background-image: url(./assets/img/shadow_right.png);
+        transform: rotate(90deg);
+        background-size: 180px;
+    }
+
+    .slider__element--second::before {
+        width: 180px;
+        height: 298px;
+        left: 319px;
+        top: 84px;
+        background-image: url(./assets/img/phone-vertical-display.png);
+        transform: rotate(0deg);
+        background-size: 180px;
+    }
+
+    .slider__element--second .phone--right {
+        width: 168px;
+    }
+
+    .phone--middle {
+        top: 26px;
+        left: 140px;
+        height: 432px;
+        width: 227px;
+    }
+
+    .slider__element--second .phone--left, 
+    .slider__element--second .phone--right {
+        bottom: 0;
+        top: 12px;
+    }
+
+    .slider__element--second .phone--left {
+        left: 180px;
+    }
+
+    .slider__element--second .phone--right {
+        left: 87px;
+    }
+
+    .about-us__image {
+        width: 218px;
+    }
+
+    .form textarea,
+    .form input {
+        width: 442px;
+    }
+
+    .form textarea {
+        height: 159px;
+    }
+
+    .information {
+        margin-left: 0;
+    }
+
+    .information__text {
+        padding-right: 35px;
     }
 }
