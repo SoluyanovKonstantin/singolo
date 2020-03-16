@@ -1,3 +1,25 @@
+@keyframes display-none--left {
+    0% {
+        z-index: 5;
+        left: 0;
+    }
+    100% {
+        z-index: 5;
+        left: -3000px;
+    }
+}
+
+@keyframes display-none--right {
+    0% {
+        z-index: 5;
+        left: 0;
+    }
+    100% {
+        z-index: 5;
+        left: 3000px;
+    }
+}
+
 html {
     scroll-behavior: smooth;
     padding-bottom: -285px;
@@ -6,6 +28,16 @@ html {
 
 .display-none {
     display: none;
+}
+
+.display-none--left {
+    animation: display-none--left 1s;
+    left: -3000px;
+}
+
+.display-none--right {
+    animation: display-none--right 1s;
+    left: 3000px;
 }
 
 .container {
@@ -113,13 +145,13 @@ html {
 .slider {
     position: relative;
     min-height: 600px;
-    background: linear-gradient(0deg, rgb(234, 103, 107) 6px, rgb(240, 109, 102) 6px);
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     padding-top: 95px;
     z-index: 3;
+    overflow: hidden;
 }
 
 .slider__btn {
@@ -154,7 +186,7 @@ html {
     background-image: url('./assets/img/arrow-right.svg');
     transform: rotate(180deg);
     margin-left: 25px;
-
+    z-index: 1;
 }
 
 .slider__btn--right {
@@ -169,11 +201,13 @@ html {
 }
 
 .phone--left {
-    right: 35px;
-    bottom: 4px;
+    top: 54px;
+    left: 110px;
 }
 
 .phone--middle {
+    top: 43px;
+    left: 140px;
     height: 498px;
     width: 254px;
 }
@@ -183,12 +217,20 @@ html {
     cursor: pointer;
 }
 
+.slider__element {
+    position: absolute;
+    min-height: 600px;
+    width: 1020px;
+    background: linear-gradient(0deg, rgb(234, 103, 107) 6px, rgb(240, 109, 102) 6px);
+}
+
 .slider__element::after {
     position: absolute;
     content: '';
     width: 240px;
     height: 483px;
-    left: 144px;
+    top: 53px;
+    left: 112px;
     opacity: 0.15;
     z-index: 0;
     background-image: url(./assets/img/shadow_left.png);
@@ -199,8 +241,8 @@ html {
     content: '';
     width: 240px;
     height: 483px;
-    left: 550px;
-    top: 159px;
+    left: 548px;
+    top: 53px;
     opacity: 0.15;
     z-index: 0;
     background-image: url(./assets/img/shadow_right.png);
@@ -223,12 +265,12 @@ html {
     transform: none;
     z-index: 2;
     left: 398px;
-    top: 211px;
+    top: 110px;
 }
 
 .phone--right {
-    left: 34px;
-    bottom: 126px;
+    left: 205px;
+    bottom: 67px;
 }
 
 .our-services {
@@ -830,7 +872,7 @@ html {
     width: 30px;
 }
 
-.slider--blue {
+.slider__element--second {
     background: #648BF0;
 }
 
@@ -839,15 +881,15 @@ html {
     opacity: 0.5;
     bottom: 0;
     transform: scale(0.7);
-    top: 0px;
+    top: 37px;
 }
 
 .slider__element--second .phone--left {
-    left: 58px;
+    left: 198px;
 }
 
 .slider__element--second .phone--right {
-    left: -66px;
+    left: 73px;
 }
 
 .screen-phone {

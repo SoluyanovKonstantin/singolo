@@ -16,10 +16,16 @@ let getSliderBtn = document.querySelectorAll('.slider__btn');
 getSliderBtn.forEach(function(item) {
   item.addEventListener('click', function(evt) {
     this.blur();
+    let flag = item.classList.contains('slider__btn--left');
     document.querySelectorAll('.slider__element').forEach(function(item){
-      item.classList.toggle('display-none');
+      if (item.classList.contains('display-none--left') || item.classList.contains('display-none--right')) {
+        item.classList.remove('display-none--left');
+        item.classList.remove('display-none--right');
+      } else {
+        if (flag) item.classList.add('display-none--right');
+        else item.classList.add('display-none--left');
+      }
     }) 
-    document.querySelector('.slider').classList.toggle('slider--blue')
   })
 })
 
