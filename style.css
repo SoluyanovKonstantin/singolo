@@ -916,3 +916,13 @@ html {
     display: flex;
     flex-wrap: wrap;
 }
+
+@media (max-width : 768px) {
+    .container {
+        width: 768px;
+    }
+
+    .slider__element {
+        width: 768px;
+    }
+}
