@@ -5,7 +5,7 @@
     }
     100% {
         z-index: 5;
-        left: -3000px;
+        left: -1020px;
     }
 }
 
@@ -16,7 +16,7 @@
     }
     100% {
         z-index: 5;
-        left: 3000px;
+        left: 1020px;
     }
 }
 
