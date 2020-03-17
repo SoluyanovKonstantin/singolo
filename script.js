@@ -86,3 +86,11 @@ document.querySelector('.form__submit').addEventListener('click', (evt) => {
     }
   }
 })
+
+document.querySelector('.sandwich').addEventListener('click', (evt)=>{
+  let nav_bar = document.querySelector('.nav-bar');
+  let sandwich = document.querySelector('.sandwich');
+
+  nav_bar.style.display = nav_bar.style.display != 'block' ? 'block' : 'none';
+  sandwich.style.transform = sandwich.style.transform != 'rotate(90deg)' ? 'rotate(90deg)' : 'rotate(0deg)';
+})
