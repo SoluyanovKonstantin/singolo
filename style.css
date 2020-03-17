@@ -337,6 +337,7 @@ html {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .features__element {
@@ -443,7 +444,7 @@ html {
 
 .portfolio {
     min-height: 800px;
-    background: linear-gradient(#2d303a 863px, #323746 683px );
+    background: linear-gradient(0deg, #323746 6px, #2d303a 6px );
     padding-top: 69px;
     padding-left: 35px;
     z-index: 1;
@@ -529,7 +530,6 @@ html {
 
 .album {
     padding: 5px;
-    height: 620px;
     overflow: hidden;
 }
 
@@ -546,7 +546,7 @@ html {
     padding-left: 40px;
     height: 690px;
     font-family: 'Lato', 'Arial', sans-serif;
-    background: linear-gradient(#f2f2f2 728px, #fff 728px);
+    background: linear-gradient(0deg, #fff 6px, #f2f2f2 6px);
     border-top: 95px solid rgba(0, 0, 0, 0);
     top: -95px;
     margin-bottom: -95px;
@@ -679,7 +679,7 @@ html {
     min-height: 610px;
     padding-top: 44px;
     padding-left: 40px;
-    background: linear-gradient(#f06c64 647px, #ea676b 647px);
+    background: linear-gradient(0deg, #ea676b 6px,#f06c64 6px);
     font-family: 'Lato', 'Arial' ,sans-serif;
     position: relative;
 }
@@ -706,6 +706,7 @@ html {
 .form__wrapper {
     display: flex;
     flex-direction: row;
+    justify-content: center;
 }
 
 .form {
@@ -967,11 +968,11 @@ html {
 
 @media (max-width : 1020px) {
     .container {
-        width: 768px;
+        width: 100%;
     }
 
     .slider__element {
-        width: 768px;
+        width: 100%;
         min-height: 452px;
     }
 
@@ -980,21 +981,29 @@ html {
     }
 
     .main-header {
-        width: 768px;
+        width: 100%;
     }
 
     .portfolio {
-        background: linear-gradient(#2d303a 1075px, #323746 683px );
+        min-height: auto;
     }
 
     .album {
-        height: 820px;
         padding-bottom: 68px;
+        justify-content: center;
     }
 
     .album__image {
         width: 216px;
         height: 183px;
+    }
+
+    .about-us__author {
+        max-width: 218px;
+    }
+
+    .about-us__authors {
+        justify-content: center;
     }
     
     .phone--left {
@@ -1152,7 +1161,6 @@ html {
     }
 
     .container {
-        width: 375px;
     }
 
     .screen-phone--first {
@@ -1173,9 +1181,7 @@ html {
     }
 
     .slider__element {
-        width: 375px;
         min-height: 220px;
-        background: linear-gradient(0deg, rgb(234, 103, 107) 16px, rgb(240, 109, 102) 6px);
     }
 
     .slider__element--second {
@@ -1254,18 +1260,15 @@ html {
     }
 
     .main-header {
-        width: 375px;
     }
 
     .about-us {
         height: auto;
-        background: linear-gradient(#f2f2f2 1537px, #fff 728px);
         padding-bottom: 45px;
     }
 
     .portfolio {
         padding-left: 23px;
-        background: linear-gradient(#2d303a 1173px, #323746 683px );
     }
 
     .album {
@@ -1288,6 +1291,7 @@ html {
 
     .form__wrapper {
         flex-wrap: wrap;
+        margin-left: -30px;
     }
 
     .information {
@@ -1296,6 +1300,7 @@ html {
 
     .form {
         margin-bottom: 60px;
+        width: 313px;
     }
 
     .form .form__submit {
@@ -1303,7 +1308,6 @@ html {
     }
 
     .section-form {
-        background: linear-gradient(#f06c64 1059px, #ea676b 647px);
         padding-left: 30px;
     }
 }
