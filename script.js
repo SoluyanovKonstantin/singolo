@@ -98,7 +98,12 @@ document.querySelector('.form__submit').addEventListener('click', (evt) => {
       let description = document.querySelector('#description').value;
       description = description === '' ? 'Без описания' : 'Описание: ' + description;
       let message = 'Письмо отправлено \n'+subject+'\n'+description;
-      alert(message);
+      document.querySelector('.message__theme').innerText = subject;
+      document.querySelector('.message__description').innerText = description;
+      document.querySelector('.message').style.display = 'block';
+      setTimeout( ()=> {
+        document.querySelector('.message').style.display = 'none';
+      }, 2850 )
     }
   }
 })

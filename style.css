@@ -20,6 +20,24 @@
     }
 }
 
+@keyframes to-visible {
+    0% {
+        opacity: 0;
+    }
+
+    33% {
+        opacity: 1;
+    }
+
+    66% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
 html {
     scroll-behavior: smooth;
     padding-bottom: -285px;
@@ -758,6 +776,29 @@ html {
     padding-left: 0;
     padding-right: 0;
     cursor: pointer;
+}
+
+.message {
+    animation: to-visible 3s;
+    display: block;
+    position: fixed;
+    width: 375px;
+    height: 238px;
+    background-color: #F2F2F2;
+    color: #666D89;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    display: none;
+    z-index: 2;
+    border-radius: 5px;
+    overflow: auto;
+}
+
+.message h2 {
+    margin-top: 10px;
+    font-size: 16px;
 }
 
 .information {
