@@ -966,6 +966,21 @@ html {
         bottom: 42px;
     }
 
+    .screen-phone--first {
+        top: 103px;
+        left: 122px;
+    }
+
+    .screen-phone--second {
+        top: 96px;
+        left: 426px;
+    }
+
+    .screen-phone {
+        width: 142px;
+        height: 251px;
+    }
+
     .slider__element::after {
         width: 180px;
         height: 362px;
@@ -1097,6 +1112,23 @@ html {
 
     .container {
         width: 375px;
+    }
+
+    .screen-phone--first {
+        top: 54px;
+        left: 76px;
+    }
+
+    .screen-phone.screen-phone--second {
+        top: 42px;
+        left: 217px;
+        width: 69px;
+        height: 127px;
+    }
+
+    .screen-phone {
+        width: 65px;
+        height: 115px;
     }
 
     .slider__element {
