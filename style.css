@@ -40,6 +40,10 @@ html {
     left: 3000px;
 }
 
+.sandwich {
+    display: none;
+}
+
 .container {
     width: 1020px;
     display: block;
@@ -1050,6 +1054,17 @@ html {
         display: flex;
         flex-direction: row;
         justify-content: center;
+    }
+
+    .sandwich {
+        display: block;
+        width: 25px;
+        height: 20px;
+        background: url(./assets/img/Burger-menu-icon.svg);
+        position: absolute;
+        left: 15px;
+        border: 0;
+        z-index: 2;
     }
 
     .nav-bar {
