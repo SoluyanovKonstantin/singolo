@@ -55,7 +55,6 @@ document.querySelectorAll('.filter__btn').forEach( (item)=>{
       bool = false;
       for (let i = 0; i < 12; i++) {
         let numRandom;
-        debugger;
         numRandom = Math.ceil(Math.random() * arr.length-1);
         if (arr[numRandom] === oldArray[i]) {
           if (numRandom === 0) {
@@ -67,8 +66,6 @@ document.querySelectorAll('.filter__btn').forEach( (item)=>{
         arrRandom.push( arr.splice(numRandom, 1)[0] );
       }
     }
-    console.log(arrRandom);
-    console.log(oldArray);
     oldArray = arrRandom;
     let i = 0;
     document.querySelectorAll('.album__image').forEach( (item) => {
