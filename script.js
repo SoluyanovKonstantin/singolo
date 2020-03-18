@@ -1,15 +1,37 @@
+function switchChecked(currentAnchor) {
+  let index = 1;
+  anchors.forEach( (item)=>{
+    if (index === currentAnchor) {
+      item.classList.add('checked');
+    } else {
+      item.classList.remove('checked');
+    }
+    index++;
+  } )
+}
+
 const anchors = [].slice.call(document.querySelectorAll('a[href*="#"]'));
+let names = [];
+let currentAnchor = 1;
 
 anchors.forEach(function(item) {
+  names.push(item.href.substring(item.href.indexOf('#')));
   item.addEventListener('click', function(e) {
-
+    let i = 1;
     anchors.forEach((item)=> {
-        item.classList.remove('checked');
+        item.index = i;
+        i++;
     })
-    item.classList.add('checked');    
-    
+    currentAnchor = item.index;
+    switchChecked(currentAnchor);
   });
 });
+
+let coordAnchors = [];
+
+names.forEach( (item)=>{
+  coordAnchors.push(document.querySelector(item).getBoundingClientRect().top + pageYOffset);
+})
 
 let getSliderBtn = document.querySelectorAll('.slider__btn');
 
@@ -112,3 +134,77 @@ document.querySelector('.sandwich').addEventListener('click', (evt)=>{
   nav_bar.style.display = nav_bar.style.display != 'block' ? 'block' : 'none';
   sandwich.style.transform = sandwich.style.transform != 'rotate(90deg)' ? 'rotate(90deg)' : 'rotate(0deg)';
 })
+
+addEventListener('scroll', (evt)=>{
+  if (currentAnchor != 1) {
+    if (pageYOffset >= coordAnchors[0] && pageYOffset< coordAnchors[0]+100) {
+      currentAnchor = 1;
+      switchChecked(currentAnchor);    
+    }
+  }
+  if (currentAnchor != 2) {
+    if (pageYOffset >= coordAnchors[1] && pageYOffset< coordAnchors[1]+100) {
+      currentAnchor = 2
+      switchChecked(currentAnchor);    
+    }
+  }
+  if (currentAnchor != 3) {
+    if (pageYOffset >= coordAnchors[2] && pageYOffset< coordAnchors[2]+100) {
+      currentAnchor = 3;
+      switchChecked(currentAnchor);    
+    }
+  } 
+  if (currentAnchor != 4) {
+    if (pageYOffset >= coordAnchors[3] && pageYOffset< coordAnchors[3]+100) {
+      currentAnchor = 4;
+      switchChecked(currentAnchor);    
+    }
+  }
+  if (currentAnchor != 5) {
+    let scrollHeight = Math.max(
+      document.body.scrollHeight, document.documentElement.scrollHeight,
+      document.body.offsetHeight, document.documentElement.offsetHeight,
+      document.body.clientHeight, document.documentElement.clientHeight
+    );
+    if (pageYOffset >= coordAnchors[4] && pageYOffset< coordAnchors[4]+100 || pageYOffset + document.documentElement.clientHeight === scrollHeight) {
+      currentAnchor = 5;
+      switchChecked(currentAnchor);    
+    }
+  }
+})
+
+if (currentAnchor != 1) {
+    if (pageYOffset >= coordAnchors[0] && pageYOffset< coordAnchors[1]) {
+      currentAnchor = 1;
+      switchChecked(currentAnchor);    
+    }
+  }
+  if (currentAnchor != 2) {
+    if (pageYOffset >= coordAnchors[1] && pageYOffset< coordAnchors[2]) {
+      currentAnchor = 2
+      switchChecked(currentAnchor);    
+    }
+  }
+  if (currentAnchor != 3) {
+    if (pageYOffset >= coordAnchors[2] && pageYOffset< coordAnchors[3]) {
+      currentAnchor = 3;
+      switchChecked(currentAnchor);    
+    }
+  } 
+  if (currentAnchor != 4) {
+    if (pageYOffset >= coordAnchors[3] && pageYOffset< coordAnchors[4]) {
+      currentAnchor = 4;
+      switchChecked(currentAnchor);    
+    }
+  }
+  if (currentAnchor != 5) {
+    let scrollHeight = Math.max(
+      document.body.scrollHeight, document.documentElement.scrollHeight,
+      document.body.offsetHeight, document.documentElement.offsetHeight,
+      document.body.clientHeight, document.documentElement.clientHeight
+    );
+    if (pageYOffset >= coordAnchors[4]-100 && pageYOffset< coordAnchors[5] || pageYOffset + document.documentElement.clientHeight === scrollHeight) {
+      currentAnchor = 5;
+      switchChecked(currentAnchor);    
+    }
+  }

@@ -23,15 +23,25 @@
         <div id="home" class="slider">
             <button class="slider__btn slider__btn--left"></button>
             <div class="slider__element">
-                <img src="./assets/img/phone-left.png" class="phone phone--first phone--left" alt="right phone">
-                <div class="screen-phone phone--first screen-phone--first display-none"></div>
-                <img src="./assets/img/phone-right.png" class="phone phone--second phone--right" alt="left phone">
-                <div class="screen-phone phone--second screen-phone--second display-none"></div>
+                <div class="phone__wrapper phone--first">
+                    <img src="./assets/img/phone-left.png" class="phone phone--left" alt="right phone">
+                    <div class="screen-phone phone--first screen-phone--first display-none"></div>
+                </div>
+                <div class="phone__wrapper phone--second">
+                    <img src="./assets/img/phone-right.png" class="phone phone--right" alt="left phone">
+                    <div class="screen-phone screen-phone--second display-none"></div>
+                </div>
             </div>
             <div class="slider__element slider__element--second display-none">
-                <img src="./assets/img/iPhone_vertical.png" class="phone phone--left phone--off" alt="right phone">
-                <img src="./assets/img/iPhone_vertical.png" class="phone phone--middle phone--off" alt="right phone">
-                <img src="./assets/img/iPhone_vertical.png" class="phone phone--right phone--off" alt="right phone">
+                <div class="phone__wrapper phone--third">
+                    <img src="./assets/img/iPhone_vertical.png" class="phone phone--left phone--off" alt="right phone">
+                </div>
+                <div class="phone__wrapper phone--fourth">
+                    <img src="./assets/img/iPhone_vertical.png" class="phone phone--middle phone--off" alt="right phone">
+                </div>
+                <div class="phone__wrapper phone--fifth">
+                    <img src="./assets/img/iPhone_vertical.png" class="phone phone--right phone--off" alt="right phone">
+                </div>
             </div>
             <button class="slider__btn slider__btn--right"></button>
         </div>

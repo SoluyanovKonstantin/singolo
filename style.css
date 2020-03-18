@@ -216,6 +216,10 @@ html {
     margin-right: 23px;
 }
 
+.phone__wrapper {
+    position: absolute;
+}
+
 .phone {
     position: relative;
     z-index: 1;
@@ -223,13 +227,9 @@ html {
 }
 
 .phone--left {
-    top: 54px;
-    left: 110px;
 }
 
 .phone--middle {
-    top: 43px;
-    left: 140px;
     height: 498px;
     width: 254px;
 }
@@ -246,37 +246,47 @@ html {
     background: linear-gradient(0deg, rgb(234, 103, 107) 6px, rgb(240, 109, 102) 6px);
 }
 
-.slider__element::after {
+.phone--second {
+    top:50%;
+    left: 50%;
+    transform: translate(-15%, -50%);
+}
+
+.phone--first {
+    top:50%;
+    left: 50%;
+    transform: translate(-170%, -50%);
+}
+
+.phone--first::after {
     position: absolute;
     content: '';
     width: 240px;
     height: 483px;
-    top: 53px;
-    left: 112px;
     opacity: 0.15;
     z-index: 0;
     background-image: url(./assets/img/shadow_left.png);
+    transform: translate(-89%, 0px);
 }
 
-.slider__element::before {
+.phone--second::after {
     position: absolute;
     content: '';
     width: 240px;
     height: 483px;
-    left: 548px;
-    top: 53px;
     opacity: 0.15;
     z-index: 0;
     background-image: url(./assets/img/shadow_right.png);
-    transform: rotate(90deg);
+    transform: rotate(90deg) translate(-50%, 69%);
 }
 
-.slider__element--second::after,
-.slider__element--second::before {
-    display: none;
+.phone--fourth {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
-.slider__element--second::before {
+.phone--fourth::before {
     opacity: 1;
     display: block;
     position: absolute;
@@ -286,13 +296,9 @@ html {
     background-image: url(./assets/img/phone-vertical-display.png);
     transform: none;
     z-index: 2;
-    left: 398px;
-    top: 110px;
 }
 
 .phone--right {
-    left: 205px;
-    bottom: 67px;
 }
 
 .our-services {
@@ -386,7 +392,7 @@ html {
     letter-spacing: -0.00px;
     margin-top: 8px;
     margin-bottom: 13px;
-    width: 220px;
+    max-width: 220px;
     height: 62px;
     overflow: hidden;
 }
@@ -487,6 +493,7 @@ html {
     list-style: none;
     display: inline-block;
     width: auto;
+    margin-bottom: 10px;
 }
 
 .filter__btn:focus {
@@ -1301,6 +1308,11 @@ html {
     .form {
         margin-bottom: 60px;
         width: 313px;
+        margin-right: 7px;
+    }
+
+    .information {
+        max-width: 315px;
     }
 
     .form .form__submit {
@@ -1309,5 +1321,15 @@ html {
 
     .section-form {
         padding-left: 30px;
+    }
+
+    .socials--footer .socials__link {
+        width: 28px;
+        height: 28px;
+    }
+
+    .footer {
+        padding-left: 3vw;
+        padding-right: 3vw;
     }
 }
