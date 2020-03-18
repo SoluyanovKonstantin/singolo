@@ -1,3 +1,25 @@
+@keyframes from-left {
+    0% {
+        z-index: 5;
+        left: -100vw;
+    }
+    100% {
+        z-index: 5;
+        left: 0;
+    }
+}
+
+@keyframes from-right {
+    0% {
+        z-index: 5;
+        left: 100vw;
+    }
+    100% {
+        z-index: 5;
+        left: 0;
+    }
+}
+
 @keyframes display-none--left {
     0% {
         z-index: 5;
@@ -5,7 +27,7 @@
     }
     100% {
         z-index: 5;
-        left: -1020px;
+        left: -100vw;
     }
 }
 
@@ -16,7 +38,7 @@
     }
     100% {
         z-index: 5;
-        left: 1020px;
+        left: 100vw;
     }
 }
 
@@ -226,9 +248,6 @@ html {
     border-radius: 22px;
 }
 
-.phone--left {
-}
-
 .phone--middle {
     height: 498px;
     width: 254px;
@@ -296,9 +315,8 @@ html {
     background-image: url(./assets/img/phone-vertical-display.png);
     transform: none;
     z-index: 2;
-}
-
-.phone--right {
+    top: 13.4%;
+    left: 5.4%;
 }
 
 .our-services {
@@ -339,7 +357,7 @@ html {
 }
 
 .features {
-    margin-left: 36px;
+    margin-left: 0;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -932,20 +950,20 @@ html {
     background: #648BF0;
 }
 
+.phone--third {
+    left: 50%;
+    transform: translate(-130%, 10%);
+}
+
+.phone--fifth {
+    left: 50%;
+    transform: translate(27%, 10%);
+}
+
 .slider__element--second .phone--left,
 .slider__element--second .phone--right {
     opacity: 0.5;
-    bottom: 0;
     transform: scale(0.7);
-    top: 37px;
-}
-
-.slider__element--second .phone--left {
-    left: 198px;
-}
-
-.slider__element--second .phone--right {
-    left: 73px;
 }
 
 .screen-phone {
@@ -1019,18 +1037,6 @@ html {
 
     .phone--right {
         width: 345px;
-        left: 159px;
-        bottom: 42px;
-    }
-
-    .screen-phone--first {
-        top: 103px;
-        left: 122px;
-    }
-
-    .screen-phone--second {
-        top: 96px;
-        left: 426px;
     }
 
     .screen-phone {
@@ -1041,8 +1047,6 @@ html {
     .slider__element::after {
         width: 180px;
         height: 362px;
-        top: 53px;
-        left: 112px;
         background-image: url(./assets/img/shadow_left.png);
         background-size: 180px;
     }
@@ -1050,8 +1054,6 @@ html {
     .slider__element::before {
         width: 180px;
         height: 362px;
-        left: 419px;
-        top: 49px;
         background-image: url(./assets/img/shadow_right.png);
         transform: rotate(90deg);
         background-size: 180px;
@@ -1060,11 +1062,23 @@ html {
     .slider__element--second::before {
         width: 180px;
         height: 298px;
-        left: 319px;
-        top: 84px;
         background-image: url(./assets/img/phone-vertical-display.png);
         transform: rotate(0deg);
         background-size: 180px;
+    }
+
+    .phone--first::after {
+        width: 183px;
+        height: 369px;
+        background-size: 183px;
+        transform: translate(-88%, 0px);
+    }
+
+    .phone--second::after {
+        width: 183px;
+        height: 367px;
+        background-size: 183px;
+        transform: rotate(90deg) translate(-50%, 68%);
     }
 
     .slider__element--second .phone--right {
@@ -1072,24 +1086,21 @@ html {
     }
 
     .phone--middle {
-        top: 26px;
-        left: 140px;
         height: 432px;
         width: 227px;
     }
 
-    .slider__element--second .phone--left, 
-    .slider__element--second .phone--right {
-        bottom: 0;
-        top: 12px;
+    .phone--fifth {
+        transform: translate(38%, 20%);
     }
 
-    .slider__element--second .phone--left {
-        left: 180px;
+    .phone--third {
+        transform: translate(-147%, 22%);
     }
 
-    .slider__element--second .phone--right {
-        left: 87px;
+    .phone--fourth::before {
+        height: 298px;
+        width: 179px;
     }
 
     .about-us__image {
@@ -1165,9 +1176,6 @@ html {
 
     .nav-bar a::after {
         display: none;
-    }
-
-    .container {
     }
 
     .screen-phone--first {
@@ -1264,9 +1272,6 @@ html {
 
     .phone {
         border-radius: 7px;
-    }
-
-    .main-header {
     }
 
     .about-us {
