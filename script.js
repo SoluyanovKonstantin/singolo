@@ -44,21 +44,30 @@ getSliderBtn.forEach(function(item) {
         item.classList.remove('display-none');
         item.classList.remove('display-none--left');
         item.classList.remove('display-none--right');
+        if (flag) item.style.animation = 'from-left 0.5s';
+        else item.style.animation = 'from-right 0.5s';
+
       } else {
-        if (flag) item.classList.add('display-none--right');
-        else item.classList.add('display-none--left');
+        if (flag) {
+           item.classList.add('display-none--right');
+           item.style.animation = 'display-none--right 0.5s';
+        }
+        else {
+          item.classList.add('display-none--left');
+          item.style.animation = 'display-none--left 0.5s';
+        }
       }
     }) 
   })
 })
 
-document.querySelectorAll('.phone--first').forEach(function(item) {
+document.querySelectorAll('.phone--first .phone, .phone--first .screen-phone').forEach(function(item) {
   item.addEventListener('click', (evt)=>{
     document.querySelector('.screen-phone--first').classList.toggle('display-none');
   })
 })
 
-document.querySelectorAll('.phone--second').forEach(function(item) {
+document.querySelectorAll('.phone--second .phone, .phone--second .screen-phone').forEach(function(item) {
   item.addEventListener('click', (evt)=>{
     document.querySelector('.screen-phone--second').classList.toggle('display-none');
   })
@@ -122,6 +131,10 @@ document.querySelector('.form__submit').addEventListener('click', (evt) => {
       document.querySelector('.message').style.display = 'block';
       setTimeout( ()=> {
         document.querySelector('.message').style.display = 'none';
+        document.querySelector('#name').value = ''; 
+        document.querySelector('#email').value = '';
+        document.querySelector('#subject').value = '';
+        document.querySelector('#description').value = '';
       }, 2850 )
     }
   }

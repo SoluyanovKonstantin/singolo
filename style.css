@@ -1,7 +1,7 @@
 @keyframes from-left {
     0% {
         z-index: 5;
-        left: -100vw;
+        left: -100%;
     }
     100% {
         z-index: 5;
@@ -12,7 +12,7 @@
 @keyframes from-right {
     0% {
         z-index: 5;
-        left: 100vw;
+        left: 100%;
     }
     100% {
         z-index: 5;
@@ -27,7 +27,7 @@
     }
     100% {
         z-index: 5;
-        left: -100vw;
+        left: -100%;
     }
 }
 
@@ -38,7 +38,7 @@
     }
     100% {
         z-index: 5;
-        left: 100vw;
+        left: 100%;
     }
 }
 
@@ -214,6 +214,7 @@ html {
     height: 50px;
     border-radius: 50%;
     filter: opacity(20%);
+    z-index: 6;
 }
 
 .slider__btn:focus {
@@ -230,7 +231,7 @@ html {
     background-image: url('./assets/img/arrow-right.svg');
     transform: rotate(180deg);
     margin-left: 25px;
-    z-index: 1;
+    z-index: 6;
 }
 
 .slider__btn--right {
@@ -253,8 +254,10 @@ html {
     width: 254px;
 }
 
-.phone--first,
-.phone--second {
+.phone--first .phone,
+.phone--second .phone,
+.phone--first .screen-phone, 
+.phone--second .screen-phone{
     cursor: pointer;
 }
 
@@ -310,8 +313,9 @@ html {
     display: block;
     position: absolute;
     content: '';
-    width: 200px;
+    width: 202px;
     height: 344px;
+    background-size: 202px 344px;
     background-image: url(./assets/img/phone-vertical-display.png);
     transform: none;
     z-index: 2;
@@ -975,14 +979,14 @@ html {
     z-index: 2;
 }
 .screen-phone--first {
-    top: 119px;
-    left: 126px;
+    top: 14%;
+    left: 7.5%;
 }
 
 .screen-phone--second {
     transform: rotate(90deg);
-    top: 115px;
-    left: 557px;
+    top: -27%;
+    left: 29%;
     width: 189px;
 }
 
@@ -1178,14 +1182,21 @@ html {
         display: none;
     }
 
-    .screen-phone--first {
-        top: 54px;
-        left: 76px;
+    .phone--second::after {
+        width: 86px;
+        height: 176px;
+        background-size: 86px 176px;
+        transform: rotate(90deg) translate(-50%, 69%);
+    }
+
+    .phone--first::after {
+        width: 80px;
+        height: 168px;
+        background-size: 80px 168px;
+        transform: translate(-88%, 0px);    
     }
 
     .screen-phone.screen-phone--second {
-        top: 42px;
-        left: 217px;
         width: 69px;
         height: 127px;
     }
@@ -1210,37 +1221,24 @@ html {
     .slider__element::after {
         width: 82px;
         height: 165px;
-        top: 32px;
-        left: 71px;
         background-size: 82px;
     }
 
     .slider__element::before {
         width: 88px;
         height: 177px;
-        left: 212px;
-        top: 21px;
         background-size: 88px;
     }
 
     .slider__element--second::before {
         width: 58px;
         height: 104px;
-        left: 159px;
-        top: 58px;
         background-size: 59px;
     }
 
     .slider__element--second .phone--right {
         width: 52px;
         transform: none;
-        left: 65px;
-        top: 15px;
-    }
-
-    .slider__element--second .phone--left {
-        left: 98px;
-        top: 37px;
     }
 
     .slider__btn--left {
@@ -1251,21 +1249,22 @@ html {
         margin-right: 0;
     }
 
+    .phone--fourth::before {
+        width: 60px;
+        height: 121px;
+        background-size: 59px 103px;
+        background-repeat: no-repeat;
+    }
+
     .phone--left {
         width: 74px;
-        top: 32px;
-        left: 71px;
     }
 
     .phone--right {
         width: 168px;
-        left: 90px;
-        bottom: 11px;
     }
 
     .phone--middle {
-        top: 38px;
-        left: 77px;
         height: 150px;
         width: 74px;
     }
