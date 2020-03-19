@@ -216,7 +216,7 @@ if (currentAnchor != 1) {
       document.body.offsetHeight, document.documentElement.offsetHeight,
       document.body.clientHeight, document.documentElement.clientHeight
     );
-    if (pageYOffset >= coordAnchors[4]-100 && pageYOffset< coordAnchors[5] || pageYOffset + document.documentElement.clientHeight === scrollHeight) {
+    if (pageYOffset >= coordAnchors[4] && pageYOffset< coordAnchors[5] || pageYOffset + document.documentElement.clientHeight === scrollHeight) {
       currentAnchor = 5;
       switchChecked(currentAnchor);    
     }
