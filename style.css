@@ -1107,6 +1107,14 @@ html {
         width: 179px;
     }
 
+    .screen-phone--first {
+        left: 6.5%;
+    }
+
+    .screen-phone--second {
+        top: -29%;
+    }
+
     .about-us__image {
         width: 218px;
     }
