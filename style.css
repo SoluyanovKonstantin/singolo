@@ -1132,7 +1132,7 @@ html {
 @media (max-width: 767px) {
     .logo {
         position: relative;
-        z-index: 1;
+        z-index: 3;
         margin-left: 0;
     }
 
@@ -1194,6 +1194,14 @@ html {
         height: 168px;
         background-size: 80px 168px;
         transform: translate(-88%, 0px);    
+    }
+
+    .phone--fifth {
+        transform: translate(56%, 51%);
+    }
+
+    .phone--third {
+        transform: translate(-128%, 22%);
     }
 
     .screen-phone.screen-phone--second {

@@ -143,9 +143,18 @@ document.querySelector('.form__submit').addEventListener('click', (evt) => {
 document.querySelector('.sandwich').addEventListener('click', (evt)=>{
   let nav_bar = document.querySelector('.nav-bar');
   let sandwich = document.querySelector('.sandwich');
+  let logo = document.querySelector('.logo');
 
   nav_bar.style.display = nav_bar.style.display != 'block' ? 'block' : 'none';
   sandwich.style.transform = sandwich.style.transform != 'rotate(90deg)' ? 'rotate(90deg)' : 'rotate(0deg)';
+  if (nav_bar.style.display === 'block') {  
+    logo.style.right = '80px';
+    logo.style.top = '2px';
+  } else { 
+    logo.style.right = '0';
+    logo.style.top = '0px';
+
+  };
 })
 
 addEventListener('scroll', (evt)=>{
