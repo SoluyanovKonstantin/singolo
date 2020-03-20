@@ -296,10 +296,6 @@ html {
     -moz-transform: rotate(90deg) translate(-141%, -26%);
 }
 
-.phone--fourth {
-
-}
-
 .phone--fourth::before {
     opacity: 1;
     display: block;
@@ -946,14 +942,6 @@ html {
     background: #648BF0;
 }
 
-.phone--third {
-
-}
-
-.phone--fifth {
-
-}
-
 .slider__element--second .phone--left,
 .slider__element--second .phone--right {
     opacity: 0.5;
@@ -1042,9 +1030,6 @@ html {
     .about-us__author {
         max-width: 218px;
     }
-
-    .about-us__authors {
-    }
     
     .phone--left {
         width: 163px;
@@ -1096,6 +1081,7 @@ html {
         width: 183px;
         height: 368px;
         background-size: 183px;
+        transform: translate(-89%, 0px);
         -moz-transform: translate(2%, -94%);
     }
 
@@ -1126,12 +1112,6 @@ html {
     .phone--fourth::before {
         height: 298px;
         width: 179px;
-    }
-
-    .screen-phone--first {
-    }
-
-    .screen-phone--second {
     }
 
     .filter {
