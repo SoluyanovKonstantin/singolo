@@ -12,7 +12,6 @@ function switchChecked(currentAnchor) {
 
 const anchors = [].slice.call(document.querySelectorAll('a[href*="#"]'));
 let names = [];
-let currentAnchor = 1;
 
 anchors.forEach(function(item) {
   names.push(item.href.substring(item.href.indexOf('#')));
@@ -27,11 +26,53 @@ anchors.forEach(function(item) {
   });
 });
 
+let currentAnchor = 1;
 let coordAnchors = [];
 
 names.forEach( (item)=>{
   coordAnchors.push(document.querySelector(item).getBoundingClientRect().top + pageYOffset);
 })
+
+function checkSwith() {
+  let pageMiddle = pageYOffset + document.documentElement.clientHeight/2 - 50;
+  let isTop = pageYOffset === 0;
+  if (currentAnchor != 1) {
+    if (pageMiddle >= coordAnchors[0] && pageMiddle< coordAnchors[1] || pageYOffset === 0) {
+      currentAnchor = 1;
+      switchChecked(currentAnchor);    
+    }
+  }
+  if (currentAnchor != 2 && !isTop) {
+    if (pageMiddle >= coordAnchors[1] && pageMiddle< coordAnchors[2]) {
+      currentAnchor = 2
+      switchChecked(currentAnchor);    
+    }
+  }
+  if (currentAnchor != 3) {
+    if (pageMiddle >= coordAnchors[2] && pageMiddle< coordAnchors[3]) {
+      currentAnchor = 3;
+      switchChecked(currentAnchor);    
+    }
+  } 
+  if (currentAnchor != 4) {
+    if (pageMiddle >= coordAnchors[3] && pageMiddle< coordAnchors[4]) {
+      currentAnchor = 4;
+      switchChecked(currentAnchor);    
+    }
+  }
+  if (currentAnchor != 5) {
+    let scrollHeight = Math.max(
+      document.body.scrollHeight, document.documentElement.scrollHeight,
+      document.body.offsetHeight, document.documentElement.offsetHeight,
+      document.body.clientHeight, document.documentElement.clientHeight
+    );
+    if (pageMiddle >= coordAnchors[4] && pageMiddle< coordAnchors[5] || pageYOffset + document.documentElement.clientHeight === scrollHeight) {
+      currentAnchor = 5;
+      switchChecked(currentAnchor);    
+    }
+  }
+}
+
 
 let getSliderBtn = document.querySelectorAll('.slider__btn');
 
@@ -157,76 +198,8 @@ document.querySelector('.sandwich').addEventListener('click', (evt)=>{
   };
 })
 
-addEventListener('scroll', (evt)=>{
-  if (currentAnchor != 1) {
-    if (pageYOffset >= coordAnchors[0] && pageYOffset< coordAnchors[0]+100) {
-      currentAnchor = 1;
-      switchChecked(currentAnchor);    
-    }
-  }
-  if (currentAnchor != 2) {
-    if (pageYOffset >= coordAnchors[1] && pageYOffset< coordAnchors[1]+100) {
-      currentAnchor = 2
-      switchChecked(currentAnchor);    
-    }
-  }
-  if (currentAnchor != 3) {
-    if (pageYOffset >= coordAnchors[2] && pageYOffset< coordAnchors[2]+100) {
-      currentAnchor = 3;
-      switchChecked(currentAnchor);    
-    }
-  } 
-  if (currentAnchor != 4) {
-    if (pageYOffset >= coordAnchors[3] && pageYOffset< coordAnchors[3]+100) {
-      currentAnchor = 4;
-      switchChecked(currentAnchor);    
-    }
-  }
-  if (currentAnchor != 5) {
-    let scrollHeight = Math.max(
-      document.body.scrollHeight, document.documentElement.scrollHeight,
-      document.body.offsetHeight, document.documentElement.offsetHeight,
-      document.body.clientHeight, document.documentElement.clientHeight
-    );
-    if (pageYOffset >= coordAnchors[4] && pageYOffset< coordAnchors[4]+100 || pageYOffset + document.documentElement.clientHeight === scrollHeight) {
-      currentAnchor = 5;
-      switchChecked(currentAnchor);    
-    }
-  }
-})
+checkSwith();
 
-if (currentAnchor != 1) {
-    if (pageYOffset >= coordAnchors[0] && pageYOffset< coordAnchors[1]) {
-      currentAnchor = 1;
-      switchChecked(currentAnchor);    
-    }
-  }
-  if (currentAnchor != 2) {
-    if (pageYOffset >= coordAnchors[1] && pageYOffset< coordAnchors[2]) {
-      currentAnchor = 2
-      switchChecked(currentAnchor);    
-    }
-  }
-  if (currentAnchor != 3) {
-    if (pageYOffset >= coordAnchors[2] && pageYOffset< coordAnchors[3]) {
-      currentAnchor = 3;
-      switchChecked(currentAnchor);    
-    }
-  } 
-  if (currentAnchor != 4) {
-    if (pageYOffset >= coordAnchors[3] && pageYOffset< coordAnchors[4]) {
-      currentAnchor = 4;
-      switchChecked(currentAnchor);    
-    }
-  }
-  if (currentAnchor != 5) {
-    let scrollHeight = Math.max(
-      document.body.scrollHeight, document.documentElement.scrollHeight,
-      document.body.offsetHeight, document.documentElement.offsetHeight,
-      document.body.clientHeight, document.documentElement.clientHeight
-    );
-    if (pageYOffset >= coordAnchors[4] && pageYOffset< coordAnchors[5] || pageYOffset + document.documentElement.clientHeight === scrollHeight) {
-      currentAnchor = 5;
-      switchChecked(currentAnchor);    
-    }
-  }
+addEventListener('scroll', (evt)=>{
+  checkSwith();
+})
