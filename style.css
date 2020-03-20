@@ -1453,6 +1453,9 @@ html {
         padding-bottom: 11px;
         padding-left: 30px;
         padding-right: 30px;
+        border-top-width: 69px;
+        top: -69px;
+        margin-bottom: -69px;
     }
 
     .about-us__header {
@@ -1482,6 +1485,9 @@ html {
         padding-left: 23px;
         padding-top: 52px;
         padding-bottom: 32px;
+        border-top-width: 69px;
+        top: -69px;
+        margin-bottom: -69px;
     }
 
     .portfolio > p {
@@ -1535,6 +1541,9 @@ html {
         padding-left: 0px;
         padding-right: 0;
         padding-bottom: 0;
+        border-top-width: 69px;
+        top: -69px;
+        margin-bottom: -69px;
     }
 
     .our-services__header {
@@ -1568,6 +1577,10 @@ html {
 
     .section-form {
         padding-left: 30px;
+        border-top: 69px solid white;
+        top: -69px;
+        margin-bottom: -69px;
+        z-index: -1;
     }
 
     .section-form__header {

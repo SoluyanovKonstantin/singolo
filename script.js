@@ -10,6 +10,8 @@ function switchChecked(currentAnchor) {
   } )
 }
 
+let scrollLine = document.documentElement.clientWidth < 768 ? 69 : 95;
+
 const anchors = [].slice.call(document.querySelectorAll('a[href*="#"]'));
 let names = [];
 
@@ -23,6 +25,11 @@ anchors.forEach(function(item) {
     })
     currentAnchor = item.index;
     switchChecked(currentAnchor);
+
+    if (scrollLine === 69) {
+      document.querySelector('.nav-bar').style.display = 'none';
+      document.querySelector('.sandwich').style.transform = 'rotate(0deg)';
+    }
   });
 });
 
@@ -34,7 +41,7 @@ names.forEach( (item)=>{
 })
 
 function checkSwith() {
-  let pageMiddle = pageYOffset + document.documentElement.clientHeight/2 - 50;
+  let pageMiddle = pageYOffset + document.documentElement.clientHeight/2;
   let isTop = pageYOffset === 0;
   if (currentAnchor != 1) {
     if (pageMiddle >= coordAnchors[0] && pageMiddle< coordAnchors[1] || pageYOffset === 0) {
@@ -66,7 +73,8 @@ function checkSwith() {
       document.body.offsetHeight, document.documentElement.offsetHeight,
       document.body.clientHeight, document.documentElement.clientHeight
     );
-    if (pageMiddle >= coordAnchors[4] && pageMiddle< coordAnchors[5] || pageYOffset + document.documentElement.clientHeight === scrollHeight) {
+
+    if (pageMiddle >= coordAnchors[4] || pageYOffset + document.documentElement.clientHeight === scrollHeight) {
       currentAnchor = 5;
       switchChecked(currentAnchor);    
     }
