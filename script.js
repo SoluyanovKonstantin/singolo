@@ -41,7 +41,7 @@ names.forEach( (item)=>{
 })
 
 function checkSwith() {
-  let pageMiddle = pageYOffset + document.documentElement.clientHeight/2;
+  let pageMiddle = pageYOffset + document.documentElement.clientHeight/2 - 50;
   let isTop = pageYOffset === 0;
   if (currentAnchor != 1) {
     if (pageMiddle >= coordAnchors[0] && pageMiddle< coordAnchors[1] || pageYOffset === 0) {
