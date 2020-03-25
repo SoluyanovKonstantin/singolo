@@ -122,6 +122,7 @@ document.querySelectorAll('.phone--second .phone, .phone--second .screen-phone')
   })
 })
 let oldArray = [0,1,2,3,4,5,6,7,8,9,10,11];
+
 document.querySelectorAll('.filter__btn').forEach( (item)=>{
   item.addEventListener('click', (evt)=>{
     document.querySelectorAll('.filter__btn').forEach( (item)=>{
@@ -197,11 +198,11 @@ document.querySelector('.sandwich').addEventListener('click', (evt)=>{
   nav_bar.style.display = nav_bar.style.display != 'block' ? 'block' : 'none';
   sandwich.style.transform = sandwich.style.transform != 'rotate(90deg)' ? 'rotate(90deg)' : 'rotate(0deg)';
   if (nav_bar.style.display === 'block') {  
-    logo.style.right = '80px';
-    logo.style.top = '2px';
+    logo.style.left = '-80px';
+    logo.style.top = '4px';
   } else { 
-    logo.style.right = '0';
-    logo.style.top = '0px';
+    logo.style.left = '6px';
+    logo.style.top = '4px';
 
   };
 })
