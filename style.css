@@ -1328,7 +1328,7 @@ html {
         position: fixed;
         z-index: 2;
         width: 278px;
-        height: 812px;
+        height: 100vh;
         background-color: #2D303A;
         top: 0;
         left: 0;
