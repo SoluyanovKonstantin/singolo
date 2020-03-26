@@ -774,6 +774,9 @@ html {
     padding-right: 0;
     left: 0;
     bottom: -50px;
+    background-color: #FBC65F;
+    color: #886A30;
+    font-weight: bold;
 }
 
 

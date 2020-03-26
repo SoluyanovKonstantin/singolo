@@ -121,7 +121,6 @@ document.querySelectorAll('.phone--second .phone, .phone--second .screen-phone')
     document.querySelector('.screen-phone--second').classList.toggle('display-none');
   })
 })
-let oldArray = [0,1,2,3,4,5,6,7,8,9,10,11];
 
 document.querySelectorAll('.filter__btn').forEach( (item)=>{
   item.addEventListener('click', (evt)=>{
@@ -130,29 +129,26 @@ document.querySelectorAll('.filter__btn').forEach( (item)=>{
     })
     item.classList.add('filter__btn--checked');
     let arr = [0,1,2,3,4,5,6,7,8,9,10,11];
+    let images = document.querySelectorAll('.album__image');
+    images.forEach( (item) => {
+      item.remove();
+    } )
+
     let arrRandom = [];
-    let bool = true;
-    while(bool) {
-      bool = false;
-      for (let i = 0; i < 12; i++) {
-        let numRandom;
+    let numRandom;
+    for (let i = 0; i < 12; i++) {
+      let bool = true;
+      while (bool) {
+        bool = false;
         numRandom = Math.ceil(Math.random() * arr.length-1);
-        if (arr[numRandom] === oldArray[i]) {
-          if (numRandom === 0) {
-            if (arr.length === 1) bool = true;
-            else numRandom++;
-          }
-          else numRandom--;
+        if (arr[numRandom] === i) {
+          arr.length != 1 ? bool = true : bool = NaN;
         }
-        arrRandom.push( arr.splice(numRandom, 1)[0] );
       }
+      isNaN(bool) ? document.querySelector('.album').prepend(images[arr[numRandom]]) :
+        document.querySelector('.album').append(images[arr[numRandom]]);
+      arr.splice(numRandom, 1);
     }
-    oldArray = arrRandom;
-    let i = 0;
-    document.querySelectorAll('.album__image').forEach( (item) => {
-      item.style.order = arrRandom[i];
-      i++;
-    })
   })
 })
 
