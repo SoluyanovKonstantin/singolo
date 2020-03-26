@@ -1579,12 +1579,16 @@ html {
 
     .form textarea, 
     .form input {
-        width: 298px;
+        width: calc(100% - 15px);
+    }
+
+    .form textarea {
+        padding-right: 0;
     }
 
     .form__wrapper {
         flex-wrap: wrap;
-        margin-left: -30px;
+        margin-left: -0px;
         justify-content: center;
     }
 
@@ -1630,29 +1634,44 @@ html {
 
     .form {
         margin-bottom: 60px;
-        width: 313px;
-        margin-right: 7px;
+        width: 84%;
+        margin-right: 0px;
         margin-top: 5px;  
-    } /* TODO : доделать респонсив формы */
+    }
 
     .information {
-        max-width: 315px;
+        max-width: unset;
+        width: 84%;
+    }
+
+    .information__text {
+        width: 100%;
+        max-width: unset;
     }
 
     .form .form__submit {
-        width: 315px;
+        width: 100%;
     }
 
     .section-form {
-        padding-left: 30px;
+        padding-left: 0px;
         border-top: 69px solid white;
         top: -69px;
         margin-bottom: -69px;
         z-index: -1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .section-form__header {
         margin-top: 17px;
+        width: 84%;
+    }
+
+    .section-form__text {
+        padding-right: 0;
+        width: 84%;
     }
 
     .socials--footer .socials__link {
